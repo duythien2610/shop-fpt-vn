@@ -2,6 +2,8 @@
 
 Website: https://duythien2610.github.io/shop-fpt-vn/
 
+GitHub Pages xuất bản trực tiếp từ nhánh `gh-pages`.
+
 AM là kênh sales chia sẻ link chứa cấu hình riêng cho khách. Mỗi link có tối đa 3 gói Internet và 3 gói Combo, không bắt buộc đủ 6 gói. Bật/tắt từng nhóm độc lập, giữ thứ tự sales chọn; nhóm không có gói được ẩn cùng đường dẫn đến nhóm. Prototype chưa nối admin hoặc backend.
 
 ## Xem ba concept
