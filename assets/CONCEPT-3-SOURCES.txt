@@ -1,0 +1,8 @@
+Ảnh mẫu cho prototype, không thể hiện khách hàng hay người tư vấn của FPT.
+Pexels license: https://www.pexels.com/license/
+family: https://www.pexels.com/photo/cheerful-multiethnic-family-spending-time-on-sofa-at-home-6623797/
+work — Pavel Danilyuk: https://www.pexels.com/photo/a-woman-working-with-a-laptop-at-home-7055847/
+apartment: https://www.pexels.com/photo/cozy-living-room-in-modern-apartment-6312353/
+performance — Ron Lach: https://www.pexels.com/photo/a-man-using-a-computer-7858750/
+Ảnh đã resize 1000px và chuyển WebP. Không thêm chữ trong ảnh.
+Nunito: Google Fonts / SIL Open Font License; giấy phép tại Nunito-OFL.txt.

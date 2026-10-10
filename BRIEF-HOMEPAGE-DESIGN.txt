@@ -1,0 +1,67 @@
+BRIEF UI HOMEPAGE — SHOP.FPT.VN / AM
+
+1. MỤC TIÊU
+- Hiểu nhanh, chọn nhanh, mua nhanh.
+- Khách nhận link do sales chia sẻ. Mỗi link hiển thị bộ gói sales đã cấu hình cho khách; không phải danh mục cố định.
+- Tối đa 3 gói Internet + 3 gói Combo. Có thể ít hơn hoặc chỉ có một nhóm.
+
+2. HOMEPAGE CẦN CÓ
+
+A. Header
+- Logo FPT Telecom chính thức; không thêm chữ “shop” cạnh logo.
+- Điều hướng đến nhóm gói và phần hỗ trợ.
+- Nút liên hệ tư vấn; mobile giữ header gọn.
+
+B. Hero
+- Một thông điệp chính, một câu mô tả ngắn theo tệp khách.
+- CTA dẫn xuống danh sách gói nếu bố cục cần.
+- Hình ảnh/đồ họa có điểm nhấn, phù hợp concept; không lấn át việc chọn gói.
+
+C. Danh sách gói — nội dung trung tâm
+- Hai section riêng: INTERNET và COMBO.
+- Internet: mô tả ngắn về kết nối Internet.
+- Combo: mô tả ngắn về Internet kết hợp truyền hình FPT Play.
+- Chỉ hiển thị nhóm được bật và có gói. Không để section rỗng.
+- Giữ thứ tự gói theo cấu hình sales; không tự thêm gói để đủ 3.
+- Bố cục thích ứng khi mỗi nhóm có 1, 2 hoặc 3 gói.
+
+Mỗi card/hàng gói cần:
+- Tên gói từ danh mục, giữ nguyên tên.
+- Một câu lợi ích dễ hiểu, từ nội dung được duyệt.
+- Giá, đơn vị đ/tháng và điều kiện giá nếu có.
+- Tốc độ tải xuống / tải lên; 2–3 quyền lợi chính.
+- CTA rõ ràng: “Chọn gói này” hoặc “Đăng ký”.
+- Link “Chi tiết gói” mở popup, không bắt buộc xem trước khi mua.
+- Nhãn gói gợi ý chỉ hiện khi có cấu hình; không tự gắn nhãn “bán chạy”.
+
+D. Hỗ trợ sales
+- Một thẻ nhỏ: tên sales, ảnh nếu có và kênh liên hệ được cấu hình.
+- Khi thiếu ảnh, dùng avatar chữ cái. Không bịa số điện thoại/kênh liên hệ.
+- Đặt cuối danh sách gói; concept 3 cần thể hiện rõ thẻ này.
+
+E. FAQ và footer
+- FAQ gọn, khoảng 3 câu: giá/phí, đăng ký, người hỗ trợ. Mặc định đóng.
+- Footer: thương hiệu, chính sách dữ liệu/điều khoản và thông tin cần thiết.
+
+3. HÀNH VI UI
+- Chọn gói → sang checkout ngay, giữ gói/giá và nguồn sales theo link.
+- Không yêu cầu khách chọn lại gói, đăng nhập hoặc xem popup trước checkout.
+- Cho phép quay lại đổi gói; giữ thông tin khách đã nhập trong phiên.
+- Nếu cần chọn khu vực để xác định giá, thể hiện rõ trạng thái giá trước/sau xác nhận địa chỉ.
+- Khách không chọn số lượng gói hiển thị. Bộ chọn “Link AM mẫu” cuối prototype chỉ phục vụ duyệt thiết kế.
+
+4. BA CONCEPT CẦN KHÁC NHAU VỀ STYLE VÀ BỐ CỤC
+- Concept 1 / index.html: sáng, sạch, hero ngắn; lưới card ưu tiên so sánh giá.
+- Concept 2 / concept-2.html: hero than đậm, cam FPT, hình công nghệ; phần gói nền sáng, dạng hàng gọn, nhấn tốc độ cùng giá/CTA.
+- Concept 3 / concept-3.html: nền ấm, ảnh đời sống, chữ mềm; nhóm gói trình bày gần gũi và thẻ sales rõ ràng. Nội dung theo tệp khách lấy từ mẫu đã duyệt.
+
+5. DESIGN CẦN BÀN GIAO
+- Homepage desktop + mobile cho 3 concept.
+- Component card/hàng gói, header, popup chi tiết, thẻ sales và FAQ.
+- Ví dụ cấu hình: 3+3, 1+3, 2+1, chỉ Internet, chỉ Combo; trạng thái chưa có gói.
+- Trạng thái nút/ô nhập: thường, hover, focus, lỗi và đang xử lý khi cần.
+- Giữ font, màu, khoảng cách và CTA đồng nhất trong từng concept.
+
+LƯU Ý
+- Prototype minh họa bố cục/hành trình. Giá, quyền lợi, tên sales và nội dung mẫu cần BA/PO xác nhận trước triển khai.
+- Không đưa AM SOP/ERP hoặc màn hình admin vào phạm vi homepage này.

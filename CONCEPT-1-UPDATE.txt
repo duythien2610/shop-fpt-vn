@@ -1,0 +1,34 @@
+CONCEPT 1 — BẢNG GIÁ TỐI GIẢN
+
+Mục tiêu: nhìn nhanh giá và tốc độ, chọn gói rồi đăng ký ngay.
+
+Đã chỉnh:
+- Hero ngắn, không ảnh; mô tả lấy từ audienceCopy.
+- Thanh Internet / Combo sticky dưới header, đánh dấu nhóm đang xem khi cuộn.
+- Nhóm trống ẩn; tối đa 3 gói/nhóm, thứ tự lấy từ cấu hình sales.
+- Card trắng, giá lớn nhất, hai tốc độ nằm cùng hàng; CTA đặc.
+- Gói được sales gợi ý có viền cam và nhãn nhỏ, không tô toàn card.
+- 1 gói: card ngang; 2 gói: 2 cột; 3 gói: 3 cột trên desktop.
+- Mobile: carousel scroll-snap, lấp ló card kế tiếp, có chấm chọn vị trí.
+- Chi tiết mở bottom sheet trên mobile; không chặn việc chọn gói.
+- Sales là một hàng gọn bên dưới danh sách.
+- Checkout một trang: form tối đa 520px, tóm tắt sticky bên phải.
+- Hộp "Kiểm tra lại" trong form, chỉ một nút gửi đăng ký chính.
+- Có validation, lỗi thanh toán minh họa, xử lý và kết quả mô phỏng.
+
+Giữ nguyên: offers.js, tên/mô tả/giá/tốc độ/quyền lợi, FAQ, logo,
+sales attribution và gói đã chọn. Điều chỉnh dùng chung chỉ gom chú thích
+giá thành 1 dòng/nhóm và làm CTA hero đúng với nhóm được cấu hình.
+
+Trước chọn khu vực: giá tham khảo/tháng, xác nhận theo địa chỉ.
+Sau chọn khu vực: hiện tên khu vực + trạng thái chưa xác thực, giữ số tiền.
+Không bịa giá khu vực; cần nối API giá/hạ tầng trước khi triển khai thật.
+
+Khác biệt:
+- Concept 1: so giá trực diện, hero không ảnh, lưới card, carousel mobile.
+- Concept 2: hero công nghệ tối, hình tín hiệu, danh sách gói thiên tốc độ.
+- Concept 3: ảnh đời sống, nền ấm, hỗ trợ sales gần gũi và nổi bật hơn.
+
+Brand: concept-1.css, khối :root đầu file (cam #C84B00, Inter).
+Không thêm dark mode. Dữ liệu và giao dịch đều là mô phỏng.
+Ảnh kiểm tra: qa/concept-1-update/ (5 link × 4 kích thước).

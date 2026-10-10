@@ -1,0 +1,27 @@
+CONCEPT 3 — NGƯỜI QUEN CHỌN SẴN GIÚP MÌNH
+
+Hero nền kem, tiêu đề Nunito mềm, ảnh đời sống theo audience.
+Sales hiện ngay dưới CTA: avatar/chữ cái + tên + “Đã chọn sẵn các gói này cho bạn”.
+Internet và Combo: khay cạnh nhau khi số gói chênh tối đa 1; còn lại một cột. Mobile luôn xếp dọc.
+Card: tên và giá cùng hàng → câu tốc độ → quyền lợi → Chọn gói này → Chi tiết gói.
+Sales sau danh sách: avatar lớn, tên, hỗ trợ; chỉ hiện Zalo/gọi nếu có cấu hình hợp lệ.
+Mobile: ảnh 160px; thanh Hỏi sales / Xem gói ẩn khi đang xem danh sách gói hoặc checkout.
+Checkout một trang: thông tin + kiểm tra lại + gửi mẫu. Tóm tắt có avatar và tên sales.
+
+Giữ nguyên offers.js: tên gói, giá, lợi ích, thứ tự, gợi ý, audienceCopy và mã sales.
+Chưa kết nối hệ thống giá: sau chọn khu vực vẫn là giá tham khảo, không giả vờ đã xác thực.
+Toàn bộ đăng ký/thanh toán là mô phỏng, không gửi dữ liệu đến FPT.
+
+Màu/font: đầu concept-3.css. Không làm dark mode.
+Ảnh mẫu Pexels đã đóng gói WebP; font Nunito Latin + Vietnamese WOFF2 đóng gói offline.
+Thay bằng ảnh phù hợp thị trường Việt Nam đã được duyệt trước khi chạy thật.
+Cấu hình sales tùy chọn: avatarUrl, zaloUrl (https://zalo.me/...), phone.
+Link mẫu hiện chưa cấu hình kênh nên không có nút Zalo/gọi.
+
+QA: 5 link × 375/768/1024/1440px, 4 checkout; kiểm tra gói/mã sales, khay,
+ảnh, thiếu avatar, thiếu kênh, rỗng, lỗi và xử lý mẫu. Ảnh chụp trong qa/concept-3-update.
+Probe đã sửa lỗi tương phản avatar; không còn lỗi xếp Hỏng.
+Giữ viền tông ấm và đầy đủ các trường gói theo brief dù probe app cảnh báo viền/dày chữ.
+
+Khác Concept 1: tin người trước, không lấy bảng so giá làm điểm nhấn chính.
+Khác Concept 2: ảnh đời sống và khay mềm, không hero tối hay hàng so tốc độ.

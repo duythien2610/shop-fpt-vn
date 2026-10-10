@@ -1,0 +1,32 @@
+// Presentation only; approved catalog and shared mock validation stay intact.
+const lifestyleImages={family:['lifestyle-family.webp','Gia đình cùng nhau trong phòng khách'],apartment:['lifestyle-apartment.webp','Không gian phòng khách trong căn hộ'],work:['lifestyle-work.webp','Làm việc với máy tính tại nhà'],performance:['lifestyle-performance.webp','Người dùng chơi game tại nhà']};
+const visual=document.querySelector('.hero-visual'),audienceImage=$('audience-image');
+function neutralVisual(){audienceImage.hidden=true;visual.querySelector('.neutral-scene').hidden=false;}
+audienceImage.addEventListener('error',neutralVisual);
+if(lifestyleImages[offer.audience]){const [file,alt]=lifestyleImages[offer.audience];audienceImage.src='assets/'+file;audienceImage.alt=alt;visual.dataset.audience=offer.audience;}else neutralVisual();
+for(const card of document.querySelectorAll('.plan-card')){const plan=plans.find(p=>p.id===card.dataset.planId);card.querySelector('.card-spec').textContent=`Tải xuống ${plan.down} · Tải lên ${plan.up}`;card.querySelector('[data-register]').classList.remove('outline');card.querySelector('[data-register]').classList.add('primary');}
+const sales=offer.sales;
+function populateAvatar(el){const initial=sales.name.trim().charAt(0).toLocaleUpperCase('vi');el.textContent=initial;if(sales.avatarUrl){const image=document.createElement('img');image.src=sales.avatarUrl;image.alt='';image.addEventListener('error',()=>el.textContent=initial);el.replaceChildren(image);}}
+document.querySelectorAll('.sales-avatar').forEach(populateAvatar);
+// Only validated configured channels; no invented contact details.
+const channelDefinitions=[];
+try{const url=new URL(sales.zaloUrl);if(url.protocol==='https:'&&url.hostname==='zalo.me')channelDefinitions.push(['Nhắn Zalo',url.href]);}catch{}
+if(typeof sales.phone==='string'&&/^\+?\d{9,15}$/.test(sales.phone.replace(/[\s()-]/g,'')))channelDefinitions.push(['Gọi tư vấn','tel:'+sales.phone.replace(/[\s()-]/g,'')]);
+function fillChannels(container){for(const [label,url]of channelDefinitions){const a=document.createElement('a');a.className='button outline';a.textContent=label;a.href=url;if(url.startsWith('https:')){a.target='_blank';a.rel='noopener';}container.append(a);}}
+fillChannels(document.querySelector('[data-sales-channels]'));contact.querySelector('.contact-channels').replaceChildren();fillChannels(contact.querySelector('.contact-channels'));
+contact.querySelector('.contact-message').textContent=channelDefinitions.length?'Hỗ trợ chọn gói và kiểm tra thông tin lắp đặt.':'Người tư vấn chưa cấu hình kênh liên hệ cho link này.';
+contact.querySelector('.demo-note').textContent='Prototype: không tự gửi tin nhắn hoặc thực hiện cuộc gọi.';
+const orderAdvisor=document.createElement('div');orderAdvisor.className='order-advisor';orderAdvisor.innerHTML=`<span class="sales-avatar" aria-hidden="true"></span><p><strong>${html(sales.name)}</strong> sẽ hỗ trợ bạn đăng ký</p>`;document.querySelector('.order-card').append(orderAdvisor);populateAvatar(orderAdvisor.querySelector('.sales-avatar'));
+const mobileAdvisor=document.createElement('div');mobileAdvisor.className='mobile-advisor';mobileAdvisor.hidden=true;mobileAdvisor.innerHTML=`<a href="#sales-support" class="advisor-link"><span class="sales-avatar" aria-hidden="true"></span><span>Hỏi ${html(sales.name)}</span></a><a class="button primary" href="#plans">Xem gói</a>`;document.body.append(mobileAdvisor);populateAvatar(mobileAdvisor.querySelector('.sales-avatar'));
+function updateAdvisorBar(){const tray=$('plan-grid').getBoundingClientRect();mobileAdvisor.hidden=!matchMedia('(max-width:767px)').matches||$('home').hidden||document.querySelectorAll('.offer-group').length===0||(tray.top<innerHeight&&tray.bottom>0);}
+addEventListener('scroll',updateAdvisorBar,{passive:true});addEventListener('resize',updateAdvisorBar);
+const registration=$('registration-form'),review=$('confirmation'),submit=registration.querySelector('.form-next');review.className='inline-review';review.hidden=false;review.querySelector('h2').textContent='Kiểm tra lại';registration.insertBefore(review,submit);submit.textContent='Gửi đăng ký mẫu';
+// Review belongs to the form, not a separate journey step.
+document.querySelector('.steps [data-step="2"]').remove();document.querySelector('.steps [data-step="3"] span').textContent='2';
+for(const id of ['edit-info','complete-demo','fail-demo'])$(id).type='button';
+function refreshReview(){$('customer-summary').innerHTML=dl([['Họ tên',$('full-name').value.trim()||'Chưa nhập'],['Điện thoại',$('phone').value.trim()||'Chưa nhập'],['Địa chỉ',[$('address').value,$('ward').value,$('province').value].filter(Boolean).join(', ')||'Chưa nhập']]);}
+const friendlyErrors={'full-name':['name-error','Bạn nhập thêm họ tên (ít nhất 2 ký tự) để người tư vấn tiện liên hệ nhé.'],phone:['phone-error','Bạn kiểm tra lại số điện thoại: 10 chữ số, bắt đầu bằng 0 nhé.'],province:['province-error','Bạn điền tỉnh hoặc thành phố lắp đặt nhé.'],ward:['ward-error','Bạn điền phường hoặc xã để xác định địa chỉ nhé.'],address:['address-error','Bạn thêm số nhà và tên đường để kiểm tra lắp đặt nhé.'],consent:['consent-error','Bạn đọc và đánh dấu đồng ý chính sách nếu muốn tiếp tục nhé.']};
+registration.addEventListener('input',e=>{refreshReview();if(friendlyErrors[e.target.id]){$(friendlyErrors[e.target.id][0]).textContent='';e.target.removeAttribute('aria-invalid');}});refreshReview();
+new MutationObserver(()=>{updateAdvisorBar();if(!$('checkout').hidden&&!registration.hidden){review.hidden=false;refreshReview();}}).observe($('checkout'),{attributes:true,attributeFilter:['hidden']});
+registration.addEventListener('submit',()=>{if(!registration.hidden){for(const [id,[error,message]]of Object.entries(friendlyErrors)){if($(error).textContent){$(error).textContent=message;$(id).setAttribute('aria-invalid','true');$(id).setAttribute('aria-describedby',error);}}return;}registration.hidden=false;review.hidden=false;submit.setAttribute('aria-busy','true');submit.setAttribute('aria-disabled','true');submit.textContent='Đang xử lý bản mẫu…';setTimeout(()=>{$('complete-demo').click();registration.hidden=true;submit.removeAttribute('aria-busy');submit.removeAttribute('aria-disabled');submit.textContent='Gửi đăng ký mẫu';$('result-title').tabIndex=-1;$('result-title').focus();},650);});
+registration.addEventListener('submit',e=>{if(submit.getAttribute('aria-busy')==='true'){e.preventDefault();e.stopImmediatePropagation();}},true);updateAdvisorBar();

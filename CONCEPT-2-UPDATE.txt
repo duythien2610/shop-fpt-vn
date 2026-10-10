@@ -1,0 +1,30 @@
+CONCEPT 2 — SO HIỆU NĂNG THEO HÀNG
+
+Đã chỉnh:
+- Hero nền than #101418, khoảng 320px trên desktop; ảnh cáp quang WebP 31 KB.
+- CTA hero theo nhóm hiện có: Internet / Combo / gói dành cho bạn.
+- Mỗi gói 4 vùng thẳng cột: tên + lợi ích / tốc độ / quyền lợi / giá + chọn gói.
+- Tốc độ tải xuống lớn nhất; tải lên nhỏ hơn; thanh so sánh theo Mbps thực tế.
+- Trong bộ performance, thanh tải xuống là 30% / 100% / 100% mỗi nhóm.
+- Hover chạy thanh từ 0 đến độ dài đúng trong 300ms, không giả thành 100%.
+- Hàng sales gợi ý có viền trái cam 4px và nhãn nhỏ, không tô nền cả hàng.
+- Tiêu đề nhóm sticky bên trái ở desktop; sticky trên đầu nhóm ở mobile.
+- Mobile xếp card dọc, không carousel; CTA chọn gói toàn chiều rộng.
+- Nút Xem gói dính đáy chỉ sau hero, ẩn khi tương tác với gói / checkout.
+- Thanh sales gọn ở cuối; không ảnh đại diện.
+- Checkout 2 cột, bước dạng chữ nhỏ, tóm tắt nền than.
+- Có focus rõ, lỗi, disabled, đang xử lý, reduced motion; giao dịch mô phỏng.
+
+Giữ nguyên: offers.js, tên gói, mô tả, giá, tốc độ, quyền lợi, audienceCopy,
+FAQ, mã sales và gói được chọn; không sửa bố cục concept 1 hoặc 3.
+Giá sau chọn khu vực vẫn ghi chưa xác thực, không tự tạo giá theo địa chỉ.
+
+Khác biệt: concept 1 so giá bằng lưới card sáng và carousel;
+concept 2 so tốc độ bằng hàng và thanh tỉ lệ;
+concept 3 dùng ảnh đời sống, nền ấm và thẻ hỗ trợ sales.
+
+Token màu/font: :root đầu concept-2.css; Inter dùng file local có sẵn.
+Hai sắc cam cùng thương hiệu: #FF6A1A trên nền tối, #C84B00 nền sáng.
+Hero/tóm tắt tối cố định, không thêm nút đổi dark mode toàn trang.
+Dữ liệu sales và giá là mẫu; ảnh cáp quang là asset minh họa đã có.
+Ảnh kiểm tra: qa/concept-2-update/ (5 link × 4 kích thước và checkout).
