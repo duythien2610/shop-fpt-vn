@@ -16,3 +16,4 @@ body{background:var(--background);font-weight:400}h1,h2,h3{font-family:var(--hea
 @media(max-width:767px){.section-heading .eyebrow{display:none}.section-heading h2{font-size:24px;margin:0}.section-heading{margin-bottom:20px}.consent{min-height:44px}.payment-options label{min-height:64px}}
 @media(max-width:1100px){.card-actions{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.personal-hero .banner-context{color:#62564A;margin-bottom:8px}.personal-hero .hero-copy>.eyebrow{display:none}.personal-hero .hero-visual{position:relative}.personal-hero .hero-visual:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgb(43 37 32 / .08);border-radius:inherit;pointer-events:none}

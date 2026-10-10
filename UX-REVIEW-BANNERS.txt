@@ -1,0 +1,38 @@
+RÀ SOÁT HOMEPAGE — BANNER & ĐIỀU HƯỚNG
+
+Mục tiêu: hiểu nhanh, chọn nhanh, đăng ký nhanh từ link của sales.
+
+THANH ĐẦU TRANG
+- Logo chính thức; một đường dẫn “Chọn gói”; nút liên hệ phụ.
+- Không đưa “Giải đáp” lên ngang hàng với chọn gói. FAQ giữ nguyên bên dưới,
+  có đường dẫn “Câu hỏi thường gặp” ngay sau danh sách gói.
+- Không mega-menu, ticker, carousel tự chạy hoặc nhiều banner xếp chồng.
+
+BANNER: MỖI CONCEPT MỘT CÁCH THỂ HIỆN
+1. Sáng, gọn: banner ngang nền xám nhạt, minh họa tín hiệu bằng CSS.
+   Không tải ảnh lớn; đưa khách đến bảng gói để so giá.
+2. Công nghệ: hero chính là banner than đậm, ảnh cáp quang chuyển sắc nhẹ.
+   Giữ bảng so tốc độ theo hàng, không thêm một hero thứ hai.
+3. Gần gũi: banner ảnh đời sống theo audience, nền kem và thẻ người tư vấn.
+   Giữ ảnh nhỏ trên mobile và sales xuất hiện ngay màn hình đầu.
+- Nhãn banner lấy số gói và nhóm thực tế đang hiển thị từ cấu hình sales.
+- Không đổi tên gói, giá, FAQ hoặc audienceCopy; không tự bịa ưu đãi.
+- Nếu bổ sung chiến dịch thật sau này: nội dung cần duyệt, thời hạn rõ,
+  áp dụng đúng nhóm/gói của link; một CTA. Admin ngoài phạm vi bản mẫu.
+
+CHỈNH THÊM
+- Concept 1/2 không hiện nút Zalo/điện thoại giả khi thiếu cấu hình kênh.
+- Chọn gói vẫn vào checkout trực tiếp, giữ mã sales, không đăng nhập.
+- Giá hiện tại vẫn là tham khảo; chọn khu vực không giả lập giá chính thức.
+
+THAM KHẢO (học cấu trúc, không sao chép ưu đãi hay cam kết nhà mạng khác)
+Xfinity: hero một thông điệp, gói có giá/tốc độ/lợi ích, FAQ bên dưới.
+https://www.xfinity.com/learn/internet-service
+Spectrum: nhu cầu sử dụng rõ; trình tự kiểm tra khu vực, chọn gói, checkout.
+https://www.spectrum.com/internet
+Verizon: CTA bắt đầu/kiểm tra địa chỉ và thông tin chi tiết thứ cấp.
+https://www.verizon.com/home/internet/
+AT&T:
+https://www.att.com/internet/
+
+Đây là đề xuất UX, chưa phải kết quả đo chuyển đổi thực tế.
