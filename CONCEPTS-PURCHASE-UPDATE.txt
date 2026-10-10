@@ -1,0 +1,48 @@
+HOMEPAGE & CHECKOUT — BẢN QUY HOẠCH MỚI
+
+CONCEPT 1: SO GIÁ, MUA GỌN
+- Banner sáng, bảng card đồng nhất; mỗi nhóm tóm tắt cước thấp nhất và
+  tốc độ tải xuống cao nhất, tính từ đúng các gói sales đã chọn.
+- Mobile xếp card dọc để khách nhìn thấy các lựa chọn.
+- Checkout một trang: địa chỉ, người đăng ký, kiểm tra, gửi/thanh toán.
+
+CONCEPT 2: SO HIỆU NĂNG
+- Banner than với ảnh cáp quang, điểm nhấn tải lên cao nhất bộ gói.
+- Danh sách theo hàng, tốc độ đối chiếu thẳng cột.
+- Checkout hai bước: thông tin lắp đặt -> kiểm tra và hoàn tất.
+- Tóm tắt đơn nền than, giá định kỳ và khoản trả ngay tách riêng.
+
+CONCEPT 3: TIN NGƯỜI TƯ VẤN
+- Ảnh theo audience, nền kem; người tư vấn xuất hiện trên banner và đơn.
+- Khay gói thích ứng số lượng Internet/Combo.
+- Checkout một trang, giọng hướng dẫn gần gũi, thẻ sales trong tóm tắt.
+
+THỬ PAYMENT
+Trong thanh BẢN MẪU, chọn “Checkout mẫu”:
+1. Cần xác nhận địa chỉ: gửi yêu cầu, chưa thu tiền.
+2. Đủ điều kiện — giả lập: minh họa kỳ một tháng, phí đầu 0đ (DỮ LIỆU MẪU),
+   chọn ngân hàng/QR hoặc thẻ, vào màn hình chờ.
+   Có điều khiển giả lập thành công, thất bại, chưa rõ kết quả hoặc hủy.
+   Thử lại giữ thông tin. Thành công thanh toán chưa phải kích hoạt dịch vụ.
+Không có API kiểm tra hạ tầng, báo giá, tạo đơn hoặc thu tiền thật.
+Không lưu thông tin khách ngoài phiên trang đang mở.
+
+KIỂM TRA
+verify-purchase.cjs kiểm tra hành trình mới; các verify-concept-* cũ mô tả
+checkout trước phiên bản này. 5 link mẫu x 4 kích thước homepage;
+checkout mobile/desktop, validation, giữ gói/sales, thanh toán lỗi/thử lại,
+chờ xác nhận và thành công. Ảnh trong qa/purchase-update (không publish).
+
+ĐO CHUYỂN ĐỔI KHI TÍCH HỢP THẬT
+- Tỷ lệ xem trang -> chọn gói -> gửi yêu cầu hợp lệ -> đơn đủ điều kiện
+  -> thanh toán thành công. Tách các bước, không gộp gửi yêu cầu với mua thành công.
+- Theo dõi tỷ lệ lỗi từng trường, rời bỏ bước nhập địa chỉ, thời gian hoàn tất.
+- So sánh concept trên cùng tệp khách, bộ gói, giá và nguồn traffic.
+- Gán phiên bản cố định cho cùng phiên; đo theo người dùng/phiên đã thống nhất.
+- Xác định cỡ mẫu và thời gian thử trước khi kết luận; hiện chưa có số liệu
+  chứng minh tăng chuyển đổi. Chưa cài analytics/thu thập dữ liệu.
+
+PO/BA CẦN CHỐT TRƯỚC TÍCH HỢP
+Khả năng kiểm tra hạ tầng; nguồn báo giá chính thức; kỳ cước/phí/ưu đãi;
+thời điểm thu tiền; phương thức được hỗ trợ; xử lý giao dịch chưa rõ kết quả;
+hoàn tiền khi không lắp được; quy tắc ghi nhận sales và khách trực tiếp.
