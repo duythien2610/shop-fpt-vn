@@ -1,73 +1,20 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>FPT Telecom — Chọn gói dễ dàng | Concept 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Prototype ba concept shop AM FPT Telecom: chọn gói, đăng ký và thanh toán.">
+  <title>FPT Telecom · Concept 1</title>
   <link rel="icon" href="assets/fpt-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="journey.css">
-  <link rel="stylesheet" href="concept-1.css">
-  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="storefront.css">
+  <link rel="stylesheet" href="checkout.css">
 </head>
 <body data-concept="1">
-  <header class="header"><div class="container header-inner">
-    <a href="#" class="brand" aria-label="FPT Telecom — trang chủ"><img src="assets/fpt-logo.svg" alt="FPT Telecom"></a>
-    <nav aria-label="Điều hướng chính"><a href="#plans">Chọn gói</a></nav>
-    <button class="button outline contact-trigger">Liên hệ tư vấn <span aria-hidden="true">↗</span></button>
-  </div></header>
-
-  <main id="home">
-    <section class="hero container service-banner" aria-label="Banner chọn gói">
-      <div class="hero-copy">
-        <h1>Chọn gói dễ dàng. <span>Kết nối theo cách của bạn.</span></h1>
-        <p class="hero-description" data-audience-copy></p>
-        <a href="#plans" class="button primary hero-cta">Xem gói dành cho bạn</a>
-      </div>
-      <div class="comparison-art" aria-hidden="true"><span class="signal-orbit"></span><span class="signal-orbit"></span><span class="signal-orbit"></span><span class="signal-base"></span><span class="signal-dot"></span></div>
-    </section>
-
-    <div class="group-toolbar"><div class="container section-heading"><nav class="offer-jumps" aria-label="Đi đến nhóm gói"></nav><button class="location-button" id="region-trigger"><span id="region-label">Chọn khu vực lắp đặt</span><span aria-hidden="true">⌄</span></button></div></div>
-    <section id="plans" class="plans-section">
-      <div class="container">
-        <div id="plan-grid" class="plan-groups"></div>
-        <div class="sales-strip"><span class="sales-avatar" data-sales-initial aria-hidden="true"></span><div><strong data-sales-name></strong><p>Hỗ trợ chọn gói & đăng ký</p></div><button class="button outline contact-trigger">Liên hệ</button></div>
-        <div class="plans-bottom"><p>Giá tham khảo theo tháng. Giá và phí áp dụng được xác nhận theo địa chỉ lắp đặt.</p></div>
-      </div>
-    </section>
-
-    <section id="faq" class="faq-section container"><div class="faq-intro"><p class="eyebrow">TRƯỚC KHI BẠN ĐĂNG KÝ</p><h2>Còn điều gì<br>bạn muốn biết?</h2><p>Giải đáp ngắn gọn, hoặc kết nối trực tiếp với người tư vấn của bạn.</p><button class="text-button contact-trigger">Liên hệ người tư vấn <span aria-hidden="true">↗</span></button></div><div id="faq-list" class="faq-list"></div></section>
-  </main>
-
-  <main id="checkout" hidden class="container checkout-page">
-    <button class="text-button" id="back-home">← Quay lại chọn gói</button>
-    <div class="checkout-heading"><p class="eyebrow">ĐĂNG KÝ TRỰC TUYẾN</p><h1>Gần hơn với kết nối mới.</h1><p>Gói đã chọn sẵn. Bạn chỉ cần hoàn tất thông tin bên dưới.</p></div>
-    <ol class="steps"><li class="active" data-step="1"><span>1</span>Thông tin lắp đặt</li><li data-step="2"><span>2</span>Xác nhận</li><li data-step="3"><span>3</span>Kết quả</li></ol>
-    <div class="checkout-layout"><div>
-      <form id="registration-form" class="form-card" novalidate>
-        <h2>Thông tin liên hệ</h2><p class="muted">Để FPT xác nhận yêu cầu đăng ký với bạn.</p>
-        <div class="field-grid"><div class="field"><label for="full-name">Họ và tên <b>*</b></label><input id="full-name" name="name" autocomplete="name" required><p class="field-error" id="name-error"></p></div><div class="field"><label for="phone">Số điện thoại <b>*</b></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><p class="field-error" id="phone-error"></p></div></div>
-        <h2 class="form-subheading">Địa chỉ lắp đặt</h2><p class="muted">Địa chỉ giúp xác nhận gói và giá áp dụng cho nhà bạn.</p>
-        <div class="field-grid"><div class="field"><label for="province">Tỉnh / Thành phố <b>*</b></label><input id="province" name="province" autocomplete="address-level1" placeholder="Ví dụ: Hồ Chí Minh" required><p class="field-error" id="province-error"></p></div><div class="field"><label for="ward">Phường / Xã <b>*</b></label><input id="ward" name="ward" autocomplete="address-level2" required><p class="field-error" id="ward-error"></p></div></div>
-        <div class="field"><label for="address">Số nhà, tên đường <b>*</b></label><input id="address" name="address" autocomplete="street-address" placeholder="Thêm tên tòa nhà, tầng / căn hộ nếu có" required><p class="field-error" id="address-error"></p></div>
-        <div class="field"><label for="note">Ghi chú <span class="muted">(không bắt buộc)</span></label><textarea id="note" name="note" rows="2" placeholder="Điều bạn muốn người tư vấn biết thêm"></textarea></div>
-        <label class="consent"><input id="consent" type="checkbox" required><span>Tôi đồng ý để FPT liên hệ về yêu cầu đăng ký và xử lý dữ liệu theo <a href="https://fpt.vn/ho-tro/chinh-sach-quy-trinh/5107/5076/286" target="_blank" rel="noopener">chính sách dữ liệu cá nhân</a>.</span></label><p class="field-error" id="consent-error"></p>
-        <button class="button primary form-next" type="submit">Kiểm tra & xác nhận thông tin</button><p class="demo-note">Prototype: thông tin chỉ dùng trong phiên này, không gửi đến FPT.</p>
-      </form>
-      <section id="confirmation" hidden class="form-card"><h2>Kiểm tra trước khi hoàn tất</h2><p class="muted">Thông tin đăng ký của bạn</p><dl id="customer-summary" class="description-list"></dl><div class="notice"><strong>Giá theo địa chỉ chưa được xác thực</strong><p>Bản mẫu chưa kết nối hệ thống giá và hạ tầng FPT. Giá dưới đây chỉ dùng để minh họa giao diện.</p></div><h2 class="form-subheading">Phương thức thanh toán mẫu</h2><fieldset class="payment-options"><legend class="sr-only">Chọn phương thức thanh toán mẫu</legend><label><input type="radio" name="payment" value="qr" checked><span><strong>QR / Ngân hàng</strong><small>Xem trạng thái thanh toán mô phỏng</small></span></label><label><input type="radio" name="payment" value="later"><span><strong>Nhận tư vấn thanh toán</strong><small>Minh họa yêu cầu cần được xác nhận</small></span></label></fieldset><div class="confirm-actions"><button class="button outline" id="edit-info">Sửa thông tin</button><button class="button primary" id="complete-demo">Hoàn tất bản mô phỏng</button></div><button class="text-button" id="fail-demo">Xem trường hợp thanh toán thất bại</button><div id="payment-error" class="notice error" hidden><strong>Thanh toán mô phỏng chưa thành công</strong><p>Bạn có thể thử lại hoặc chọn nhận tư vấn thanh toán.</p></div></section>
-      <section id="success" hidden class="form-card success-panel"><span class="success-symbol" aria-hidden="true">✓</span><h2 id="result-title">Đăng ký mẫu hoàn tất</h2><p>Đây là trạng thái minh họa. Không có đơn hàng hoặc giao dịch thật được tạo.</p><dl id="result-summary" class="description-list"></dl><button class="button outline" id="restart">Trở về trang chọn gói</button></section>
-    </div><aside class="order-card"><p class="eyebrow">GÓI BẠN ĐÃ CHỌN</p><h2 id="order-name"></h2><p id="order-description" class="muted"></p><div class="order-price"><strong id="order-price"></strong><span>đ / tháng</span></div><ul id="order-features"></ul><div class="order-total"><span>Tạm tính minh họa / tháng</span><strong id="order-total"></strong></div><p class="muted small">Giá theo địa chỉ, phí lắp đặt và chu kỳ thanh toán cần được hệ thống xác nhận trước khi thu tiền.</p><p class="sales-reference">Người giới thiệu: <strong>AM-DEMO</strong></p></aside></div>
-  </main>
-
-  <footer class="footer"><div class="container footer-top"><a href="#" class="brand" aria-label="FPT Shop"><img src="assets/fpt-logo.svg" alt="FPT Telecom"><span>shop</span></a><p>Kết nối cho những điều bạn yêu.</p><a href="https://fpt.vn/vi" target="_blank" rel="noopener">Về FPT Telecom ↗</a></div><div class="container footer-bottom"><span>© FPT Telecom · Bản mẫu giao diện, không phải website giao dịch.</span><a href="https://fpt.vn/ho-tro/chinh-sach-quy-trinh/5107/5076/286" target="_blank" rel="noopener">Chính sách dữ liệu cá nhân</a></div></footer>
-
-  <dialog id="details-modal"><div class="modal-header"><p class="eyebrow">CHI TIẾT GÓI DỊCH VỤ</p><button class="close-button" aria-label="Đóng chi tiết gói">×</button></div><div id="details-body"></div><div class="modal-footer"><button id="details-register" class="button primary">Đăng ký gói này</button></div></dialog>
-  <dialog id="region-modal"><div class="modal-header"><h2>Khu vực lắp đặt</h2><button class="close-button" aria-label="Đóng chọn khu vực">×</button></div><p class="muted">Chọn khu vực dự kiến. Giá chính thức được xác nhận ở checkout.</p><div class="region-options"><button>Hồ Chí Minh</button><button>Hà Nội</button><button>Đà Nẵng</button><button>Khu vực khác</button></div></dialog>
-  <dialog id="contact-modal"><div class="modal-header"><h2>Người tư vấn của bạn</h2><button class="close-button" aria-label="Đóng thông tin tư vấn">×</button></div><p class="muted">Người giới thiệu AM-DEMO</p><p class="contact-message">Bạn cần hỗ trợ chọn gói hoặc kiểm tra địa chỉ lắp đặt? Khi triển khai, thông tin liên hệ sẽ lấy từ cấu hình của sales.</p><p class="demo-note">Thông tin người tư vấn trong bản này là dữ liệu mẫu.</p></dialog>
-  <div class="prototype-tools" aria-label="Công cụ xem prototype"><span>BẢN MẪU</span><button id="configuration-toggle">3 gói / 6 gói</button></div>
+  <div id="app"></div>
+  <noscript>Vui lòng bật JavaScript để xem prototype các gói dịch vụ và luồng đăng ký.</noscript>
   <script src="offers.js"></script>
-  <script src="app.js"></script>
-  <script src="banner.js"></script>
-  <script src="concept-1.js"></script>
-  <script src="home-experience.js"></script>
-  <script src="purchase.js"></script>
-</body></html>
+  <script src="commerce.js"></script>
+  <script src="storefront.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

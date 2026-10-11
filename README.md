@@ -1,43 +1,37 @@
-# Prototype shop.fpt.vn — ba concept theo link sales
+# Prototype shop AM FPT Telecom — 3 concept
 
-Website: https://duythien2610.github.io/shop-fpt-vn/
+Mở **design-review.html** để so sánh thiết kế, hoặc mở trực tiếp một concept:
 
-GitHub Pages xuất bản trực tiếp từ nhánh `gh-pages`.
+- **index.html** — tối giản, ưu tiên giá; checkout một trang.
+- **concept-2.html** — công nghệ, so hiệu năng; checkout hai bước nhỏ.
+- **concept-3.html** — đời sống, ảnh card và sales; checkout một trang.
 
-AM là kênh sales chia sẻ link chứa cấu hình riêng cho khách. Mỗi link có tối đa 3 gói Internet và 3 gói Combo, không bắt buộc đủ 6 gói. Bật/tắt từng nhóm độc lập, giữ thứ tự sales chọn; nhóm không có gói được ẩn cùng đường dẫn đến nhóm. Prototype chưa nối admin hoặc backend.
+Ba trang dùng cùng dữ liệu và một luồng mua: **chọn gói → thông tin/địa chỉ → payment → kết quả**. Không nối backend, tạo đơn hay thu tiền thật. Không lưu dữ liệu khách ngoài bộ nhớ của tab.
 
-## Xem ba concept
+## Duyệt cùng PO
 
-- `index.html`: nền sáng, hero ngắn, card so sánh giá theo nhóm. Một gói tự chuyển thành card ngang ở desktop.
-- `concept-2.html`: hero than đậm với ảnh cáp quang; gói trình bày theo hàng, ưu tiên tốc độ và CTA cạnh giá.
-- `concept-3.html`: nền ấm, ảnh đời sống và người tư vấn cụ thể; hai nhóm đặt cạnh nhau khi lượng gói cân bằng, chuyển thành một cột nếu chênh lệch lớn. Có thẻ sales ngắn ở cuối danh sách.
+Bấm **Duyệt concept** ở cuối trang để đổi concept mà giữ thông tin đang nhập, chọn link mẫu và kịch bản kiểm tra địa chỉ. Có nút xem nhanh homepage, checkout và payment với thông tin mẫu. Khi giao dịch đang chờ/chưa rõ kết quả, vẫn đổi concept nhưng không đổi link hoặc tạo giao dịch mới.
 
-Mở trực tiếp bằng trình duyệt. Thanh xem mẫu cuối trang cho phép đổi concept và link AM mẫu. Đây là công cụ duyệt prototype, không phải tính năng người mua chọn số gói.
+Link mẫu: `?offer=performance` (3+3), `family` (1+3), `apartment` (2+1), `internet` (2+0), `combo` (0+2), `empty` (không có gói). Trên file mở trực tiếp, tham số `concept` giữ hướng đang duyệt khi đổi concept.
 
-Các link mẫu dùng `?offer=family` (1+3), `performance` (3+3), `apartment` (2+1), `internet` (2+0), `combo` (0+2). Đổi concept giữ nguyên offer đang xem. Có thể xem `concept-3.html?offer=performance` để thấy bố cục hai nhóm cân bằng.
+Checkout điền sẵn tỉnh/phường, loại nhà/chung cư từ link. Có thể đổi địa chỉ, kiểm tra lại và xác nhận giá mới. Nếu gói không áp dụng, giữ thông tin và cho chọn gói khác từ bộ gói trên link.
 
-## Dữ liệu và hành trình
+## Voucher và payment
 
-`offers.js` chứa danh mục gói mẫu, các link sales mẫu và mẫu nội dung theo tệp khách. Sales chỉ chọn ID gói, thứ tự, nhóm hiển thị, gói gợi ý và mẫu nội dung. Tên gói/mô tả lấy từ danh mục, không bị đổi theo concept. Các mẫu mô tả là đề xuất chờ duyệt nghiệp vụ, chưa phải nội dung đã được FPT phê duyệt.
+Trong **Thông tin thanh toán**, sau phí lắp đặt: bấm **Chọn ưu đãi** → popup → chọn voucher → áp dụng. Giữ ô nhập mã thủ công, dòng thông báo thành công, mã và số tiền giảm. Mẫu trả sau: 300.000đ − 50.000đ = 250.000đ. Khi thay kỳ cước/địa chỉ/gói, kiểm tra lại điều kiện ưu đãi.
 
-Chọn gói → thông tin liên hệ/lắp đặt → xác nhận → kết quả mô phỏng. Chi tiết kỹ thuật mở tùy chọn trong popup. Sản phẩm, giá và mã sales được giữ xuyên suốt. Không tạo đơn, gửi thông tin, gọi điện, nhắn Zalo hay thanh toán thật.
+Có kỳ trả sau/trả trước 3/6/12 tháng, mục bổ sung tùy chọn và sáu phương thức theo ảnh tham chiếu. Phí, cước kỳ và số tiền trả hôm nay tách riêng. Kết quả mô phỏng gồm thành công, lỗi/thử lại, hủy và chưa rõ kết quả. Thanh toán thành công chưa phải kích hoạt dịch vụ.
 
-Tên sales, cấu hình, giá và quyền lợi trong bản này là dữ liệu minh họa; chưa xác minh điều kiện địa chỉ. Giá giữa các gói không phải bảng giá thương mại đề xuất. Avatar chữ cái thể hiện trường hợp sales chưa có ảnh. Không dùng số điện thoại ngẫu nhiên cho kênh liên hệ.
+## Tài nguyên và chỉnh sửa
 
-## Thiết kế và tài nguyên
+Đọc **DESIGN-HANDOFF.md** để xem brief, điểm khác biệt, quy tắc và giả định cần PO/backend xác nhận. **assets/IMAGEGEN-V4-PROMPTS.md** chứa prompt của 2 banner + 4 ảnh card tạo bằng ImageGen tích hợp; PNG gốc và WebP đều nằm trong assets. Ảnh minh họa không phải ảnh thiết bị thực tế. Font và logo được giữ local.
 
-Áp dụng `.agents/skills/ui-ux/SKILL.md`: khoảng cách, card, giá, form và responsive. Landing chưa có mẫu riêng trong skill; mượn khuôn bảng giá và card, đổi bố cục theo ba concept đã mô tả. Giữ focus bàn phím và control form native của prototype. Không có công tắc dark mode; concept 2 chỉ có vùng hero tối.
-
-Token chung ở đầu `styles.css`; font và cấu trúc card trong `journey.css`; màu riêng concept 3 ở đầu `concept-3.css`. Inter 400/500/600/700 được lưu tại assets, không cần tải Google Fonts khi mở trang.
-
-Logo chính thức: https://fpt.vn/frontend_layout_2025_vibecode/assets/images/logo-ftel.svg, từ https://fpt.vn/vi. Không ghép chữ shop vào logo.
-
-Ảnh đời sống `assets/hero-family.png` được tạo bằng ImageGen trong lượt trước: gia đình Việt trong căn hộ, ánh sáng cửa sổ tự nhiên, màu gỗ và kem, không chữ/logo.
-
-Ảnh công nghệ `assets/hero-fiber.png` được tạo bằng ImageGen trong lượt trước: macro cáp quang than đậm, đầu sợi sáng cam, vật liệu chân thực, không logo/chữ/thiết bị giả. Hai ảnh được tái sử dụng trong lần cập nhật này.
+Runtime hiện tại: `offers.js`, `commerce.js`, `storefront.js/css`, `checkout.js/css`. Ba HTML chỉ tải các file này. Các script/style/ghi chú cũ giữ làm lịch sử tham khảo, không chạy cùng luồng mới.
 
 ## Kiểm tra
 
-Chạy `node shop-prototype/verify.cjs` từ thư mục dự án (dùng Playwright có sẵn trong runtime máy hiện tại). Kiểm tra 3 concept × 5 cấu hình link, giới hạn/ẩn nhóm/loại bỏ ID sai hoặc trùng, giữ sản phẩm và mã sales qua popup/checkout, sửa thông tin, trạng thái lỗi và hoàn tất mô phỏng. Kiểm tra chiều rộng 375/768/1024/1440px và chụp ảnh ở `qa/revision-3/`.
+Chạy `node verify.cjs` từ thư mục shop-prototype, hoặc `node shop-prototype/verify.cjs` từ thư mục dự án. Bộ kiểm tra hiện tại ở `verify-v4.cjs`, dùng Playwright trong runtime có sẵn trên máy. Kiểm tra 72 cấu hình homepage ở 375/768/1024/1440px và hành trình mua desktop/mobile, địa chỉ, voucher, payment và giữ trạng thái. Ảnh/kết quả ở `qa/v4` (được gitignore); gallery bàn giao ở `assets/review`.
 
-Probe UI và ảnh chụp nằm cùng thư mục QA. Những cảnh báo gu về độ dài FAQ, card nhiều dòng và viền nền ấm được xem xét theo bố cục landing; không phải lỗi dữ liệu. Mọi kiểm tra đều trên dữ liệu mẫu, không kiểm chứng hạ tầng/giá hoặc tích hợp thanh toán thực tế.
+## Giới hạn
+
+Giá, phí, địa danh mẫu, quyền lợi, voucher, tên sales và dữ liệu khách là minh họa. Backend cần xác nhận quyền đổi khu vực, nguồn giá AM, điều kiện ưu đãi, phương thức và xử lý giao dịch. Không có số liệu chứng minh tăng chuyển đổi. Bản cập nhật này chưa xuất bản hoặc push; website đã publish trước đây chưa phản ánh thay đổi local.
